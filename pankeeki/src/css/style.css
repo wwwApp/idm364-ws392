@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700");
+@font-face {
+  font-family: "AmericanTypewriter";
+  src: url("/src/assets/fonts/American\ Typewriter\ Regular.ttf") format("ttf");
+}
+
+body {
+  background-color: #fad9d0;
+  color: #31549e;
+  fill: #31549e;
+  font-family: "AmericanTypewriter", Courier, monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+/* General Block Styles */
+.block {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 17rem;
+  border-radius: 0.35rem;
+  border: 7px solid #31549e;
+  letter-spacing: 1px;
+}
+
+/* General Header Styles */
+.header {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.header > * {
+  margin: 0;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="156px" viewBox="0 0 200 156" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E9B083" offset="0%"></stop>
+            <stop stop-color="#FFE6AC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-5" transform="translate(-673.000000, -294.000000)" fill-rule="nonzero">
+            <g id="Group-Copy" transform="translate(673.000000, 299.000000)">
+                <rect id="Rectangle" stroke="#414242" stroke-width="9" fill="url(#linearGradient-1)" x="4.5" y="35.652648" width="191" height="34.6137072" rx="17.3068536"></rect>
+                <rect id="Rectangle-Copy-3" stroke="#414242" stroke-width="9" fill="url(#linearGradient-1)" x="4.5" y="73.6588785" width="191" height="34.6137072" rx="17.3068536"></rect>
+                <rect id="Rectangle-Copy-4" stroke="#414242" stroke-width="9" fill="url(#linearGradient-1)" x="4.5" y="111.665109" width="191" height="34.6137072" rx="17.3068536"></rect>
+                <polygon id="Triangle" stroke="#414242" stroke-width="9" fill="#E2486D" stroke-linecap="round" stroke-linejoin="round" points="100.311526 0 120.872274 33.0218069 79.7507788 33.0218069"></polygon>
+                <circle id="Oval" fill="#535353" cx="102.492212" cy="18.3800623" r="1.5576324"></circle>
+                <circle id="Oval-Copy" fill="#535353" cx="95.0155763" cy="25.8566978" r="1.5576324"></circle>
+                <circle id="Oval-Copy-2" fill="#535353" cx="104.361371" cy="25.2336449" r="1.5576324"></circle>
+                <ellipse id="Oval-Copy-6" fill="#FFFFFF" transform="translate(97.316091, 15.068582) rotate(26.000000) translate(-97.316091, -15.068582) " cx="97.3160906" cy="15.0685821" rx="1.5576324" ry="5.60747664"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
