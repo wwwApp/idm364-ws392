@@ -4,26 +4,30 @@ import SvgWrapper from "./SvgWrapper";
 
 class Pancake extends Component {
   render() {
-    const { image, name, desc, price } = this.props.details;
+    const { image, name, desc, price, status } = this.props.pancake;
+    const isAvailable = status === "available";
 
     return (
       <StyledPancake className="block">
         <div className="image">
           <SvgWrapper name={image} />
         </div>
-        <h2 className="name">{name}</h2>
+        <h3 className="name">{name}</h3>
         <p className="desc">{desc}</p>
         <span className="price">{price}.0</span>
-        <div className="btn-add">
-          <SvgWrapper name="add" />
-        </div>
+        <button
+          className="btn-add"
+          disabled={!isAvailable}
+          onClick={() => this.props.addToOrder(this.props.index)}
+        >
+          {isAvailable ? <SvgWrapper name="add" /> : "sorry, sold out :("}
+        </button>
       </StyledPancake>
     );
   }
 }
 
 const StyledPancake = styled.div`
-  height: 17rem;
   padding: 0.5rem;
   align-items: center;
 
@@ -49,7 +53,15 @@ const StyledPancake = styled.div`
 
   .btn-add {
     margin-top: 0.75rem;
-    width: 2rem;
+    width: 3rem;
+  }
+
+  button.btn-add[disabled] {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #31549e;
+    fill: #31549e;
   }
 `;
 

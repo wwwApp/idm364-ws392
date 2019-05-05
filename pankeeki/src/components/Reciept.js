@@ -1,37 +1,51 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "./Header";
 
 class Reciept extends Component {
-  render() {
-    let today = new Date();
-    let date = today.toLocaleDateString();
+  renderOrder = key => {
+    const pancake = this.props.pancakes[key];
+    const order = this.props.orders[key];
+
     return (
-      <StyledReciept>
-        <div className="header">
-          <h1>Receipt</h1>
-          <h2>レシット</h2>
-          <p>
-            Thank you for visitingg us today! <br />
-            Hope to see you again soon :)
-          </p>
-        </div>
-        <div className="main">
+      <li key={key} className="item">
+        <span className="detail">
+          {order}
+          <span className="left-margin">{pancake.name}</span>
+        </span>
+        <span className="price">{pancake.price * order}.0</span>
+      </li>
+    );
+  };
+
+  render() {
+    const today = new Date();
+    const date = today.toLocaleDateString();
+    const total = Object.keys(this.props.orders).reduce((accTotal, key) => {
+      const pancake = this.props.pancakes[key];
+      const order = this.props.orders[key];
+      return accTotal + pancake.price * order;
+    }, 0);
+
+    return (
+      <StyledReciept className={this.props.receiptClasses}>
+        <Header h1="Receipt" h2="レシット" />
+        <span className="greeting">
+          Thank you for visiting us today! <br />
+          Hope to see you again soon :)
+        </span>
+        <div className="body">
           <span className="date">
             date<span className="left-margin">{date}</span>
           </span>
-          <div className="order">
-            <span className="item">
-              <span className="detail">
-                1<span className="left-margin">Strawberry Pancake</span>
-              </span>
-              <span className="price">8.0</span>
-            </span>
-          </div>
+          <ul className="order">
+            {Object.keys(this.props.orders).map(key => this.renderOrder(key))}
+          </ul>
           <span className="total">
-            total<span className="left-margin">16.0</span>
+            total<span className="left-margin">{total}.0</span>
           </span>
         </div>
-        <img className="barcode" src="./images/barcode.png" alt="Barcode" />
+        {/* <img className="barcode" src="./images/barcode.png" alt="Barcode" /> */}
       </StyledReciept>
     );
   }
@@ -39,7 +53,6 @@ class Reciept extends Component {
 
 const StyledReciept = styled.aside`
   background-color: white;
-  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -59,17 +72,17 @@ const StyledReciept = styled.aside`
     h2 {
       font-size: 1rem;
     }
-
-    p {
-      font-family: "AmericanTypewriter", Courier, monospace;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      margin-top: 1.5rem;
-    }
   }
 
-  .main {
-    margin-top: 1rem;
+  .greeting {
+    font-size: 0.8rem;
+    letter-spacing: 1.15px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .body {
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -91,22 +104,46 @@ const StyledReciept = styled.aside`
 
       .price {
         text-align: right;
+        padding-bottom: 1.25rem;
       }
     }
   }
 
   .total {
     align-self: flex-end;
+    max-width: 100%;
 
     span {
       font-size: 1.5rem;
     }
   }
 
-  .barcode {
-    max-width: 100%;
-    margin-top: auto;
-    margin-bottom: 3rem;
+  // .barcode {
+  //   max-width: 100%;
+  //   margin-top: auto;
+  //   margin-bottom: 3rem;
+  // }
+
+  @media screen and (max-width: 1350px) {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0;
+    width: 0;
+    transition: 0.5s;
+
+    &.receipt--open {
+      padding: 0 2rem;
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &.receipt--open {
+      max-width: 100%;
+    }
   }
 `;
 

@@ -4,15 +4,58 @@
   src: url("/src/assets/fonts/American\ Typewriter\ Regular.ttf") format("ttf");
 }
 
+/* General Components Styles */
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: #fad9d0;
-  color: #31549e;
   fill: #31549e;
-  font-family: "AmericanTypewriter", Courier, monospace;
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+button[disabled] {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* General Font Styles */
+* {
+  color: #31549e;
+}
+
+body,
+h3 {
+  font-family: "AmericanTypewriter", Courier, monospace;
+}
+
+h1,
+h2,
+nav,
+button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* General Wrapper Styles */
+.wrapper {
+  margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 /* General Block Styles */
@@ -27,23 +70,6 @@ ul {
   letter-spacing: 1px;
 }
 
-/* General Header Styles */
-.header {
-  font-family: "Barlow Semi Condensed", sans-serif;
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.header > * {
-  margin: 0;
-}
-
-.header h1 {
-  font-weight: 700;
-  font-size: 3.5rem;
-}
-
-.header h2 {
-  font-size: 2rem;
-  font-weight: 400;
+.block > * {
+  max-width: 100%;
 }

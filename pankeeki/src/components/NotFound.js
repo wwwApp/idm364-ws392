@@ -2,13 +2,30 @@ import React from "react";
 import styled from "styled-components";
 
 const NotFound = props => {
-  return <StyledMessage>Not Found :(</StyledMessage>;
+  return (
+    <StyledMessage>
+      <h1>Not Found :(</h1>
+    </StyledMessage>
+  );
 };
 
-const StyledMessage = styled.h1`
-  font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 4rem;
-  text-align: center;
+const StyledMessage = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 180px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
 `;
 
 export default NotFound;

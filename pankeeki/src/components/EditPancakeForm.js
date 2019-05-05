@@ -5,30 +5,32 @@ import SvgWrapper from "./SvgWrapper";
 class EditPancakeForm extends Component {
   handleChange = event => {
     console.log(event.currentTarget.value);
-    // update that fish
-    // 1. Take a copy of the curernt fish
-    // const updatedFish = {
-    //   ...this.props.fish,
-    //   [event.currentTarget.name]:
-    //     event.currentTarget.name === "price"
-    //       ? parseFloat(event.currentTarget.value)
-    //       : event.currentTarget.value
-    // };
-    // this.props.updateFish(this.props.index, updatedFish);
+    console.log(event.currentTarget.name);
+
+    // Take a copy of the current pancake
+    const updatedPancake = {
+      ...this.props.pancake,
+      [event.currentTarget.name]: event.currentTarget.value
+    };
+
+    console.log(updatedPancake);
+    this.props.updatePancake(this.props.index, updatedPancake);
   };
+
   render() {
+    const { image, name, desc, price, status } = this.props.pancake;
     return (
       <StyledForm className="block">
         <div className="item">
-          <SvgWrapper name="pancake-choco" />
+          <SvgWrapper name={image} />
         </div>
         <div className="item item-wrapper">
-          <label for="image">Image</label>
+          <label htmlFor="image">Image</label>
           <select
             type="text"
             name="image"
             onChange={this.handleChange}
-            // value={this.props.fish.status}
+            value={image}
           >
             <option value="pancake-strawberry">Strawberry</option>
             <option value="pancake-blueberry">Blueberry</option>
@@ -41,25 +43,23 @@ class EditPancakeForm extends Component {
           className="item"
           type="text"
           name="name"
-          placeholder="name"
           onChange={this.handleChange}
-          // value={this.props.fish.name}
+          value={name}
         />
         <input
           className="item"
           type="text"
           name="price"
-          placeholder="price"
           onChange={this.handleChange}
-          // value={this.props.fish.price}
+          value={price}
         />
         <div className="item item-wrapper">
-          <label for="status">Availability</label>
+          <label htmlFor="status">Availability</label>
           <select
             type="text"
             name="status"
             onChange={this.handleChange}
-            // value={this.props.fish.status}
+            value={status}
           >
             <option value="available">Sweet!</option>
             <option value="unavailable">Sold Out!</option>
@@ -69,15 +69,14 @@ class EditPancakeForm extends Component {
           className="item"
           name="desc"
           onChange={this.handleChange}
-          placeholder="description"
-          // value={this.props.fish.desc}
+          value={desc}
         />
-        <div
+        <button
           className="btn-remove item"
-          onClick={() => this.props.deleteFish(this.props.index)}
+          onClick={() => this.props.deletePancake(this.props.index)}
         >
-          <SvgWrapper name="add" />
-        </div>
+          <SvgWrapper name="remove" />
+        </button>
       </StyledForm>
     );
   }
@@ -94,6 +93,10 @@ const StyledForm = styled.div`
     :focus {
       outline: none;
     }
+  }
+
+  textarea {
+    height: 3rem;
   }
 
   .item {
@@ -115,7 +118,6 @@ const StyledForm = styled.div`
 
   .btn-remove {
     width: 2rem;
-    transform: rotate(45deg);
     align-self: center;
     padding-bottom: 0;
   }
