@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import base from "../js/base";
+import pancakes from "./../js/pancakes.js";
 import Nav from "./Nav";
 
 class App extends Component {
@@ -42,10 +43,7 @@ class App extends Component {
   };
 
   reloadPancake = () => {
-    this.ref = base.syncState("pancakes", {
-      context: this,
-      state: "pancakes"
-    });
+    this.setState({ pancakes });
   };
 
   render() {

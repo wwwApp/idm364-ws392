@@ -19,8 +19,8 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-1"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
             <linearGradient
               x1="50%"
@@ -29,27 +29,27 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-2"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
           </defs>
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Artboard"
               transform="translate(-26.000000, -17.000000)"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g id="Group-Copy-2" transform="translate(26.000000, 22.000000)">
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="31.5"
@@ -60,7 +60,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-3"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-2)"
                   x="4.5"
                   y="69.5"
@@ -71,7 +71,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-4"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-2)"
                   x="4.5"
                   y="107.5"
@@ -82,7 +82,7 @@ const SvgWrapper = props => {
                 <circle
                   id="Oval"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#7852DA"
                   cx="98"
                   cy="15"
@@ -91,7 +91,7 @@ const SvgWrapper = props => {
                 <circle
                   id="Oval-Copy"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#7852DA"
                   cx="128"
                   cy="15"
@@ -100,7 +100,7 @@ const SvgWrapper = props => {
                 <circle
                   id="Oval-Copy-2"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#7852DA"
                   cx="68"
                   cy="15"
@@ -131,27 +131,27 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-1"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
           </defs>
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Desktop-HD-Copy-5"
               transform="translate(-673.000000, -294.000000)"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g id="Group-Copy" transform="translate(673.000000, 299.000000)">
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="35.652648"
@@ -162,7 +162,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-3"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="73.6588785"
@@ -173,7 +173,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-4"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="111.665109"
@@ -184,10 +184,10 @@ const SvgWrapper = props => {
                 <polygon
                   id="Triangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#E2486D"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   points="100.311526 0 120.872274 33.0218069 79.7507788 33.0218069"
                 />
                 <circle
@@ -242,27 +242,27 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-1"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
           </defs>
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Desktop-HD-Copy-5"
               transform="translate(-673.000000, -740.000000)"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g id="Group-Copy" transform="translate(673.000000, 740.000000)">
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="33.1604361"
@@ -273,7 +273,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-3"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="71.1666667"
@@ -284,7 +284,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-4"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="109.172897"
@@ -295,7 +295,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#996555"
                   x="76.1510903"
                   y="4.5"
@@ -306,7 +306,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#996555"
                   x="104.811526"
                   y="11.3535826"
@@ -350,8 +350,8 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-1"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
             <linearGradient
               x1="50%"
@@ -360,21 +360,21 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-2"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
           </defs>
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Desktop-HD-Copy-5"
               transform="translate(-194.000000, -742.000000)"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g
                 id="Group-3-Copy"
@@ -383,7 +383,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="26.3068536"
@@ -394,7 +394,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-3"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-2)"
                   x="4.5"
                   y="64.3130841"
@@ -405,7 +405,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-4"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-2)"
                   x="4.5"
                   y="102.319315"
@@ -418,7 +418,7 @@ const SvgWrapper = props => {
                     d="M43.6137072,21.8068536 C43.6137072,9.76326091 33.8504463,-2.13162821e-14 21.8068536,-2.13162821e-14 C9.76326091,-2.13162821e-14 0,9.76326091 0,21.8068536 C0,33.8504463 43.6137072,33.8504463 43.6137072,21.8068536 Z"
                     id="Oval-Copy-2"
                     stroke="#414242"
-                    stroke-width="9"
+                    strokeWidth="9"
                     fill="#AFDA52"
                   />
                   <g
@@ -500,27 +500,27 @@ const SvgWrapper = props => {
               y2="50%"
               id="linearGradient-1"
             >
-              <stop stop-color="#E9B083" offset="0%" />
-              <stop stop-color="#FFE6AC" offset="100%" />
+              <stop stopColor="#E9B083" offset="0%" />
+              <stop stopColor="#FFE6AC" offset="100%" />
             </linearGradient>
           </defs>
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Desktop-HD-Copy-5"
               transform="translate(-524.000000, -258.000000)"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             >
               <g id="Group" transform="translate(524.000000, 258.000000)">
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="33.1604361"
@@ -531,7 +531,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-3"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="71.1666667"
@@ -542,7 +542,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy-4"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="url(#linearGradient-1)"
                   x="4.5"
                   y="109.172897"
@@ -553,7 +553,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#F3D649"
                   x="76.1510903"
                   y="4.5"
@@ -564,7 +564,7 @@ const SvgWrapper = props => {
                 <rect
                   id="Rectangle-Copy"
                   stroke="#414242"
-                  stroke-width="9"
+                  strokeWidth="9"
                   fill="#F3D649"
                   x="104.811526"
                   y="11.3535826"
