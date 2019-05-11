@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { formatPrice } from "./../js/utils.js";
 import SvgWrapper from "./SvgWrapper";
 
 class Pancake extends Component {
@@ -14,7 +15,7 @@ class Pancake extends Component {
         </div>
         <h3 className="name">{name}</h3>
         <p className="desc">{desc}</p>
-        <span className="price">{price}.0</span>
+        <span className="price">{formatPrice(price)}</span>
         <button
           className="btn-add"
           disabled={!isAvailable}

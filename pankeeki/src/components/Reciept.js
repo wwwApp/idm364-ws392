@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { formatPrice } from "./../js/utils.js";
 import Header from "./Header";
 
 class Reciept extends Component {
@@ -13,7 +14,7 @@ class Reciept extends Component {
           {order}
           <span className="left-margin">{pancake.name}</span>
         </span>
-        <span className="price">{pancake.price * order}.0</span>
+        <span className="price">{formatPrice(pancake.price * order)}</span>
       </li>
     );
   };
@@ -42,7 +43,7 @@ class Reciept extends Component {
             {Object.keys(this.props.orders).map(key => this.renderOrder(key))}
           </ul>
           <span className="total">
-            total<span className="left-margin">{total}.0</span>
+            total<span className="left-margin">{formatPrice(total)}</span>
           </span>
         </div>
         {/* <img className="barcode" src="./images/barcode.png" alt="Barcode" /> */}
@@ -57,8 +58,8 @@ const StyledReciept = styled.aside`
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 2rem;
-  height: 100vh;
-  overflow-y: scroll;
+  // height: 100vh;
+  // overflow-y: scroll;
 
   .left-margin {
     margin-left: 1.5rem;
