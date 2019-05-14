@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink
-} from "react-router-dom";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import SvgWrapper from "./SvgWrapper";
-import Order from "./Order";
-import Inventory from "./Inventory";
-import NotFound from "./NotFound";
+// import Order from "./Order";
+// import Inventory from "./Inventory";
+// import NotFound from "./NotFound";
 
 class Nav extends Component {
   clickHandler = () => {
@@ -18,9 +13,9 @@ class Nav extends Component {
 
   render() {
     return (
-      <Router>
-        <React.Fragment>
-          <Switch>
+      // <Router>
+      <React.Fragment>
+        {/* <Switch>
             <Route
               exact
               path="/"
@@ -44,29 +39,29 @@ class Nav extends Component {
               )}
             />
             <Route component={NotFound} />
-          </Switch>
-          <StyledNav className="nav">
-            <ul>
-              <NavLink exact to="/">
-                <li className="link">
-                  <div className="icon">
-                    <SvgWrapper name="nav-order" />
-                  </div>
-                  <span className="text">order</span>
-                </li>
-              </NavLink>
-              <NavLink to="/inventory">
-                <li className="link">
-                  <div className="icon">
-                    <SvgWrapper name="nav-inventory" />
-                  </div>
-                  <span className="text">inventory</span>
-                </li>
-              </NavLink>
-            </ul>
-          </StyledNav>
-        </React.Fragment>
-      </Router>
+          </Switch> */}
+        <StyledNav className="nav">
+          <ul>
+            <NavLink exact to="/">
+              <li className="link">
+                <div className="icon">
+                  <SvgWrapper name="nav-order" />
+                </div>
+                <span className="text">order</span>
+              </li>
+            </NavLink>
+            <NavLink to="/inventory">
+              <li className="link">
+                <div className="icon">
+                  <SvgWrapper name="nav-inventory" />
+                </div>
+                <span className="text">inventory</span>
+              </li>
+            </NavLink>
+          </ul>
+        </StyledNav>
+      </React.Fragment>
+      // </Router>
     );
   }
 }

@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import base from "../js/base";
 import pancakes from "./../js/pancakes.js";
 import Nav from "./Nav";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Order from "./Order";
+import Inventory from "./Inventory";
+import NotFound from "./NotFound";
 
 class App extends Component {
   state = {
@@ -48,14 +52,41 @@ class App extends Component {
 
   render() {
     return (
-      <Nav
-        pancakes={this.state.pancakes}
-        orders={this.state.orders}
-        updatePancake={this.updatePancake}
-        deletePancake={this.deletePancake}
-        addToOrder={this.addToOrder}
-        reloadPancake={this.reloadPancake}
-      />
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Order
+                pancakes={this.state.pancakes}
+                orders={this.state.orders}
+                addToOrder={this.addToOrder}
+              />
+            )}
+          />
+          <Route
+            path="/inventory"
+            render={() => (
+              <Inventory
+                pancakes={this.state.pancakes}
+                updatePancake={this.updatePancake}
+                deletePancake={this.deletePancake}
+                reloadPancake={this.reloadPancake}
+              />
+            )}
+          />
+          <Route component={NotFound} />
+        </Switch>
+        <Nav
+        // pancakes={this.state.pancakes}
+        // orders={this.state.orders}
+        // updatePancake={this.updatePancake}
+        // deletePancake={this.deletePancake}
+        // addToOrder={this.addToOrder}
+        // reloadPancake={this.reloadPancake}
+        />
+      </Router>
     );
   }
 }
