@@ -1,9 +1,11 @@
 {
   "name": "pankeeki",
+  "homepage": "https://wwwApp.github.io/idm364-ws392/pankeeki",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "firebase": "^5.11.1",
+    "gh-pages": "^2.0.1",
     "re-base": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -13,6 +15,8 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
