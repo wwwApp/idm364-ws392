@@ -58,8 +58,7 @@ const StyledReciept = styled.aside`
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 2rem;
-  // height: 100vh;
-  // overflow-y: scroll;
+  min-height: 100vh;
 
   .left-margin {
     margin-left: 1.5rem;

@@ -50,25 +50,25 @@ class Order extends Component {
 
 const StyledOrder = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 175px auto;
 
   .header {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
   .menu {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: span 2;
   }
 
   .receipt {
-    grid-column-start: 4;
+    grid-column-start: 2;
     grid-column-end: end;
     grid-row-start: 1;
     grid-row-end: span end;
