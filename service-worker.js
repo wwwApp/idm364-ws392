@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/idm364-ws392/pankeeki/precache-manifest.6499415862f78d74f0626fcb063c9b27.js"
+  "/idm364-ws392/precache-manifest.63873451b515c68e03276f1e4896bdd4.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/idm364-ws392/pankeeki/index.html", {
+workbox.routing.registerNavigationRoute("/idm364-ws392/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
