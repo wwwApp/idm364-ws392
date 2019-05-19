@@ -32,7 +32,7 @@ const StyledPancake = styled.div`
   padding: 0.5rem;
   align-items: center;
   text-align: center;
-  height: 18rem;
+  height: 20rem;
 
   > * {
     margin: 0;

@@ -5,6 +5,10 @@
 }
 
 /* General Components Styles */
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #app {
@@ -69,7 +73,6 @@ button {
   border-radius: 0.35rem;
   border: 7px solid #31549e;
   letter-spacing: 1px;
-  box-sizing: border-box;
 }
 
 .block > * {

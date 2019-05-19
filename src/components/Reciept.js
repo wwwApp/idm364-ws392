@@ -58,7 +58,6 @@ class Reciept extends Component {
 }
 
 const StyledReciept = styled.aside`
-  box-sizing: border-box;
   background-color: white;
   display: flex;
   flex-direction: column;

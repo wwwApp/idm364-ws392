@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import GridLayout from "./GridLayout";
 import Pancake from "./Pancake";
 
 class Menu extends Component {
   render() {
     return (
-      // <StyledMenu className="menu">
       <GridLayout className="menu">
         {Object.keys(this.props.pancakes).map(key => {
           if (this.props.pancakes[key]) {
@@ -21,11 +19,8 @@ class Menu extends Component {
           } else return null;
         })}
       </GridLayout>
-      // </StyledMenu>
     );
   }
 }
-
-const StyledMenu = styled.div``;
 
 export default Menu;
