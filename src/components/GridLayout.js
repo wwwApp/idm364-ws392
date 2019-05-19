@@ -15,8 +15,8 @@ const StyledGrid = styled.div`
   display: grid;
   justify-items: center;
   grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-auto-rows: 1fr;
-  grid-row-gap: 1rem;
 
   > * {
     margin: 1rem;

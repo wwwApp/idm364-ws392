@@ -31,6 +31,8 @@ class Pancake extends Component {
 const StyledPancake = styled.div`
   padding: 0.5rem;
   align-items: center;
+  text-align: center;
+  height: 18rem;
 
   > * {
     margin: 0;
@@ -45,6 +47,7 @@ const StyledPancake = styled.div`
   .name {
     font-size: 1.15rem;
     font-weight: 600;
+    margin-bottom: 0.35rem;
   }
 
   .desc {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import base from "../js/base";
 import pancakes from "./../js/pancakes.js";
 import Nav from "./Nav";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Order from "./Order";
 import Inventory from "./Inventory";
 import NotFound from "./NotFound";
@@ -78,14 +78,7 @@ class App extends Component {
           />
           <Route component={NotFound} />
         </Switch>
-        <Nav
-        // pancakes={this.state.pancakes}
-        // orders={this.state.orders}
-        // updatePancake={this.updatePancake}
-        // deletePancake={this.deletePancake}
-        // addToOrder={this.addToOrder}
-        // reloadPancake={this.reloadPancake}
-        />
+        <Nav />
       </Router>
     );
   }

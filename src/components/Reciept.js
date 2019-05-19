@@ -8,6 +8,9 @@ class Reciept extends Component {
     const pancake = this.props.pancakes[key];
     const order = this.props.orders[key];
 
+    // no render when pancake is deleted
+    if (!pancake) return null;
+
     return (
       <li key={key} className="item">
         <span className="detail">
@@ -25,6 +28,8 @@ class Reciept extends Component {
     const total = Object.keys(this.props.orders).reduce((accTotal, key) => {
       const pancake = this.props.pancakes[key];
       const order = this.props.orders[key];
+      // no calc when pancake is deleted
+      if (!pancake) return accTotal + 0;
       return accTotal + pancake.price * order;
     }, 0);
 
@@ -53,12 +58,14 @@ class Reciept extends Component {
 }
 
 const StyledReciept = styled.aside`
+  box-sizing: border-box;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 2rem;
   min-height: 100vh;
+  margin-bottom: -4rem;
 
   .left-margin {
     margin-left: 1.5rem;
@@ -126,7 +133,7 @@ const StyledReciept = styled.aside`
   //   margin-bottom: 3rem;
   // }
 
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1080px) {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -138,13 +145,13 @@ const StyledReciept = styled.aside`
 
     &.receipt--open {
       padding: 0 2rem;
-      width: 300px;
+      width: 400px;
     }
   }
 
   @media screen and (max-width: 400px) {
     &.receipt--open {
-      max-width: 100%;
+      width: 100%;
     }
   }
 `;

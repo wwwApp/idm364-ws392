@@ -52,33 +52,27 @@ const StyledOrder = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 175px auto;
+  grid-template-areas:
+    "header receipt"
+    "menu receipt";
 
   .header {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: header;
   }
 
   .menu {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: span 2;
+    grid-area: menu;
   }
 
   .receipt {
-    grid-column-start: 2;
-    grid-column-end: end;
-    grid-row-start: 1;
-    grid-row-end: span end;
+    grid-area: receipt;
   }
 
   .btn-open {
     opacity: 0;
   }
 
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1080px) {
     display: flex;
     flex-direction: column;
     align-items: center;

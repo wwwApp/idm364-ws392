@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import SvgWrapper from "./SvgWrapper";
-// import Order from "./Order";
-// import Inventory from "./Inventory";
-// import NotFound from "./NotFound";
 
 class Nav extends Component {
   clickHandler = () => {
@@ -13,33 +10,7 @@ class Nav extends Component {
 
   render() {
     return (
-      // <Router>
-      <React.Fragment>
-        {/* <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Order
-                  pancakes={this.props.pancakes}
-                  orders={this.props.orders}
-                  addToOrder={this.props.addToOrder}
-                />
-              )}
-            />
-            <Route
-              path="/inventory"
-              render={() => (
-                <Inventory
-                  pancakes={this.props.pancakes}
-                  updatePancake={this.props.updatePancake}
-                  deletePancake={this.props.deletePancake}
-                  reloadPancake={this.props.reloadPancake}
-                />
-              )}
-            />
-            <Route component={NotFound} />
-          </Switch> */}
+      <>
         <StyledNav className="nav">
           <ul>
             <NavLink exact to="/">
@@ -60,8 +31,7 @@ class Nav extends Component {
             </NavLink>
           </ul>
         </StyledNav>
-      </React.Fragment>
-      // </Router>
+      </>
     );
   }
 }
