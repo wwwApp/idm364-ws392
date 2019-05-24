@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import base from "../js/base";
 import pancakes from "./../js/pancakes.js";
 import Nav from "./Nav";
