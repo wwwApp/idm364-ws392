@@ -73,7 +73,7 @@ class EditPancakeForm extends Component {
         />
         <button
           className="btn-remove item"
-          onClick={() => this.props.deletePancake(this.props.index)}
+          onClick={() => this.props.removePancake(this.props.index)}
         >
           <SvgWrapper name="remove" />
         </button>

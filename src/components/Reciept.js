@@ -8,8 +8,9 @@ class Reciept extends Component {
     const pancake = this.props.pancakes[key];
     const order = this.props.orders[key];
 
-    // no render when pancake is deleted
+    // no render when pancake/order is removed
     if (!pancake) return null;
+    else if (!order) return null;
 
     return (
       <li key={key} className="item">
@@ -28,7 +29,7 @@ class Reciept extends Component {
     const total = Object.keys(this.props.orders).reduce((accTotal, key) => {
       const pancake = this.props.pancakes[key];
       const order = this.props.orders[key];
-      // no calc when pancake is deleted
+      // no calc when pancake is removed
       if (!pancake) return accTotal + 0;
       return accTotal + pancake.price * order;
     }, 0);
@@ -148,7 +149,7 @@ const StyledReciept = styled.aside`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     &.receipt--open {
       width: 100%;
     }

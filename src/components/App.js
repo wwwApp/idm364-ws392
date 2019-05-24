@@ -27,11 +27,14 @@ class App extends Component {
     this.setState({ pancakes });
   };
 
-  deletePancake = key => {
-    console.log("delete pancake");
+  removePancake = key => {
+    console.log("remove pancake");
     const pancakes = { ...this.state.pancakes };
     pancakes[key] = null;
     this.setState({ pancakes });
+
+    // don't forget to remove from order too
+    this.removeOrder(key);
   };
 
   addToOrder = key => {
@@ -43,6 +46,14 @@ class App extends Component {
     } else {
       orders[key] = 1;
     }
+    this.setState({ orders });
+  };
+
+  removeOrder = key => {
+    console.log("remove from order");
+    const orders = { ...this.state.orders };
+    // if already exisiting add 1, otherwise assign 1
+    orders[key] = null;
     this.setState({ orders });
   };
 
@@ -71,7 +82,7 @@ class App extends Component {
               <Inventory
                 pancakes={this.state.pancakes}
                 updatePancake={this.updatePancake}
-                deletePancake={this.deletePancake}
+                removePancake={this.removePancake}
                 reloadPancake={this.reloadPancake}
               />
             )}

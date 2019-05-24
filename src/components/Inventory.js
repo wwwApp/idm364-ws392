@@ -18,7 +18,7 @@ class Inventory extends Component {
                   index={key}
                   pancake={this.props.pancakes[key]}
                   updatePancake={this.props.updatePancake}
-                  deletePancake={this.props.deletePancake}
+                  removePancake={this.props.removePancake}
                 />
               );
             } else return null;
