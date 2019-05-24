@@ -53,7 +53,8 @@ h3 {
 h1,
 h2,
 nav,
-button {
+button,
+.hover {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 

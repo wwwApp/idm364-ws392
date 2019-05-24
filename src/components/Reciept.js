@@ -14,11 +14,16 @@ class Reciept extends Component {
 
     return (
       <li key={key} className="item">
-        <span className="detail">
-          {order}
-          <span className="left-margin">{pancake.name}</span>
-        </span>
-        <span className="price">{formatPrice(pancake.price * order)}</span>
+        <div>
+          <div className="detail">
+            {order}
+            <span className="left-margin">{pancake.name}</span>
+          </div>
+          <div className="price">{formatPrice(pancake.price * order)}</div>
+        </div>
+        <div className="remove" onClick={() => this.props.removeOrder(key)}>
+          <button className="btn-remove">x</button>
+        </div>
       </li>
     );
   };
@@ -107,13 +112,36 @@ const StyledReciept = styled.aside`
     overflow-y: auto;
 
     .item {
-      & > span {
-        display: block;
+      display: flex;
+      overflow: hidden;
+
+      > * {
+        flex-grow: 1;
       }
 
       .price {
         text-align: right;
         padding-bottom: 1.25rem;
+      }
+
+      .remove {
+        margin-left: 20px;
+        // max-width: 56px;
+        max-width: 0px;
+        transition: 0.5s;
+
+        .btn-remove {
+          background-color: #31549e;
+          color: white;
+          font-weight: bold;
+          font-size: 1.5rem;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &:hover .remove {
+        max-width: 56px;
       }
     }
   }
@@ -149,7 +177,7 @@ const StyledReciept = styled.aside`
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     &.receipt--open {
       width: 100%;
     }

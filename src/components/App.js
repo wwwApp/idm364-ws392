@@ -18,6 +18,11 @@ class App extends Component {
       context: this,
       state: "pancakes"
     });
+
+    this.ref = base.syncState("orders", {
+      context: this,
+      state: "orders"
+    });
   }
 
   updatePancake = (key, updatedPancake) => {
@@ -73,6 +78,7 @@ class App extends Component {
                 pancakes={this.state.pancakes}
                 orders={this.state.orders}
                 addToOrder={this.addToOrder}
+                removeOrder={this.removeOrder}
               />
             )}
           />

@@ -38,9 +38,10 @@ class Order extends Component {
         <Reciept
           pancakes={this.props.pancakes}
           orders={this.props.orders}
+          removeOrder={this.props.removeOrder}
           receiptClasses={receiptClasses}
         />
-        <button className="btn-open" onClick={() => this.openReceipt()}>
+        <button className="btn-open button" onClick={() => this.openReceipt()}>
           {this.state.isOpen ? "X" : totalOrderNum}
         </button>
       </StyledOrder>
