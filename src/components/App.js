@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Route, Switch } from "react-router-dom";
 import base from "../js/base";
 import pancakes from "./../js/pancakes.js";
 import Nav from "./Nav";
@@ -52,7 +52,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <>
         <Switch>
           <Route
             exact
@@ -79,7 +79,7 @@ class App extends Component {
           <Route component={NotFound} />
         </Switch>
         <Nav />
-      </Router>
+      </>
     );
   }
 }

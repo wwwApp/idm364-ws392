@@ -4,10 +4,6 @@ import styled from "styled-components";
 import SvgWrapper from "./SvgWrapper";
 
 class Nav extends Component {
-  clickHandler = () => {
-    console.log("clikced");
-  };
-
   render() {
     return (
       <>
