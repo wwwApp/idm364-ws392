@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import base from "../js/base";
 import pancakes from "./../js/pancakes.js";
+import { ThemeProvider } from "styled-components";
 import Nav from "./Nav";
 import Order from "./Order";
 import Inventory from "./Inventory";
@@ -69,6 +70,7 @@ class App extends Component {
   render() {
     return (
       <>
+        {/* <ThemeProvider theme={theme}> */}
         <Switch>
           <Route
             exact
@@ -96,9 +98,15 @@ class App extends Component {
           <Route component={NotFound} />
         </Switch>
         <Nav />
+        {/* </ThemeProvider> */}
       </>
     );
   }
 }
+
+const theme = {
+  mainBlue: "#31549e",
+  mainPink: "#fad9d0"
+};
 
 export default App;

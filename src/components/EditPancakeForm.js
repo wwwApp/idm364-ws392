@@ -52,6 +52,7 @@ class EditPancakeForm extends Component {
           name="price"
           onChange={this.handleChange}
           value={price}
+          placeholder="8 (in dollars)"
         />
         <div className="item item-wrapper">
           <label htmlFor="status">Availability</label>

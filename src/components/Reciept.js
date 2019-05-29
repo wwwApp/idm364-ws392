@@ -57,7 +57,6 @@ class Reciept extends Component {
             total<span className="left-margin">{formatPrice(total)}</span>
           </span>
         </div>
-        {/* <img className="barcode" src="./images/barcode.png" alt="Barcode" /> */}
       </StyledReciept>
     );
   }
@@ -154,12 +153,6 @@ const StyledReciept = styled.aside`
       font-size: 1.5rem;
     }
   }
-
-  // .barcode {
-  //   max-width: 100%;
-  //   margin-top: auto;
-  //   margin-bottom: 3rem;
-  // }
 
   @media screen and (max-width: 1080px) {
     position: fixed;
