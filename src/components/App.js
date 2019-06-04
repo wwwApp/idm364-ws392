@@ -20,11 +20,21 @@ class App extends Component {
       state: "pancakes"
     });
 
-    this.ref = base.syncState("orders", {
-      context: this,
-      state: "orders"
-    });
+    // initialize localstorage for personal orders
+    this.initializeFirstLanding();
   }
+
+  initializeFirstLanding = () => {
+    if (localStorage.getItem("isInitialized")) {
+      // if visited before
+      const orders = JSON.parse(localStorage.getItem("orders"));
+      this.setState({ orders });
+    } else {
+      // if first visit
+      localStorage.setItem("isInitialized", true);
+      localStorage.setItem("orders", JSON.stringify(this.state.orders));
+    }
+  };
 
   updatePancake = (key, updatedPancake) => {
     console.log("update pancake");
@@ -53,6 +63,7 @@ class App extends Component {
       orders[key] = 1;
     }
     this.setState({ orders });
+    localStorage.setItem("orders", JSON.stringify(orders));
   };
 
   removeOrder = key => {
@@ -61,6 +72,7 @@ class App extends Component {
     // if already exisiting add 1, otherwise assign 1
     orders[key] = null;
     this.setState({ orders });
+    localStorage.setItem("orders", JSON.stringify(orders));
   };
 
   reloadPancake = () => {
