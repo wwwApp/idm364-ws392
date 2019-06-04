@@ -88,7 +88,7 @@ const StyledOrder = styled.div`
       height: 3rem;
       font-weight: 700;
       font-size: 1.5rem;
-      background-color: #31549e;
+      background-color: ${props => props.theme.mainBlue};
       color: white;
     }
   }

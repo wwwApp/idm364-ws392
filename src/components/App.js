@@ -69,44 +69,46 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        {/* <ThemeProvider theme={theme}> */}
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <Order
-                pancakes={this.state.pancakes}
-                orders={this.state.orders}
-                addToOrder={this.addToOrder}
-                removeOrder={this.removeOrder}
-              />
-            )}
-          />
-          <Route
-            path="/inventory"
-            render={() => (
-              <Inventory
-                pancakes={this.state.pancakes}
-                updatePancake={this.updatePancake}
-                removePancake={this.removePancake}
-                reloadPancake={this.reloadPancake}
-              />
-            )}
-          />
-          <Route component={NotFound} />
-        </Switch>
-        <Nav />
-        {/* </ThemeProvider> */}
-      </>
+      <ThemeProvider theme={theme}>
+        <>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Order
+                  pancakes={this.state.pancakes}
+                  orders={this.state.orders}
+                  addToOrder={this.addToOrder}
+                  removeOrder={this.removeOrder}
+                />
+              )}
+            />
+            <Route
+              path="/inventory"
+              render={() => (
+                <Inventory
+                  pancakes={this.state.pancakes}
+                  updatePancake={this.updatePancake}
+                  removePancake={this.removePancake}
+                  reloadPancake={this.reloadPancake}
+                />
+              )}
+            />
+            <Route component={NotFound} />
+          </Switch>
+          <Nav />
+        </>
+      </ThemeProvider>
     );
   }
 }
 
 const theme = {
   mainBlue: "#31549e",
-  mainPink: "#fad9d0"
+  mainPink: "#fad9d0",
+  activePink: "#ffcfcf",
+  baseGray: "#f9f9f9"
 };
 
 export default App;

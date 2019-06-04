@@ -43,7 +43,7 @@ const StyledInventory = styled.div`
   align-items: center;
 
   .btn-reload {
-    background-color: #31549e;
+    background-color: ${props => props.theme.mainBlue};
     color: white;
     width: 10rem;
     height: 3rem;

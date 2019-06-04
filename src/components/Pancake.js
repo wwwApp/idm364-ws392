@@ -64,8 +64,8 @@ const StyledPancake = styled.div`
     width: 100%;
     font-weight: bold;
     font-size: 1.25rem;
-    color: #31549e;
-    fill: #31549e;
+    color: ${props => props.theme.mainBlue};
+    fill: ${props => props.theme.mainBlue};
   }
 `;
 

@@ -37,7 +37,7 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #f9f9f9;
+    background-color: ${props => props.theme.baseGray};
     width: 100%;
     height: 4rem;
     margin: 0;
@@ -49,7 +49,7 @@ const StyledNav = styled.nav`
       width: 100%;
 
       &.active {
-        background-color: #ffcfcf;
+        background-color: ${props => props.theme.activePink};
       }
     }
     .link {
@@ -63,7 +63,7 @@ const StyledNav = styled.nav`
       .icon {
         width: 1.5rem;
         margin: 0 auto;
-        fill: #31549e;
+        fill: ${props => props.theme.mainBlue};
       }
 
       .text {

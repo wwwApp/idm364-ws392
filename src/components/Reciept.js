@@ -9,8 +9,8 @@ class Reciept extends Component {
     const order = this.props.orders[key];
 
     // no render when pancake/order is removed
-    if (!pancake) return null;
-    else if (!order) return null;
+    // OR sold out
+    if (!pancake || pancake.status === "unavailable" || !order) return null;
 
     return (
       <li key={key} className="item">
@@ -34,8 +34,8 @@ class Reciept extends Component {
     const total = Object.keys(this.props.orders).reduce((accTotal, key) => {
       const pancake = this.props.pancakes[key];
       const order = this.props.orders[key];
-      // no calc when pancake is removed
-      if (!pancake) return accTotal + 0;
+      // no calc when pancake is removed OR sold out
+      if (!pancake || pancake.status === "unavailable") return accTotal + 0;
       return accTotal + pancake.price * order;
     }, 0);
 
@@ -125,12 +125,11 @@ const StyledReciept = styled.aside`
 
       .remove {
         margin-left: 20px;
-        // max-width: 56px;
         max-width: 0px;
         transition: 0.5s;
 
         .btn-remove {
-          background-color: #31549e;
+          background-color: ${props => props.theme.mainBlue};
           color: white;
           font-weight: bold;
           font-size: 1.5rem;
@@ -164,9 +163,18 @@ const StyledReciept = styled.aside`
     width: 0;
     transition: 0.5s;
 
+    > * {
+      opacity: 0;
+      transition: 0.25s;
+    }
+
     &.receipt--open {
       padding: 0 2rem;
       width: 400px;
+
+      > * {
+        opacity: 1;
+      }
     }
   }
 

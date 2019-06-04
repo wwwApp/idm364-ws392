@@ -4,9 +4,6 @@ import SvgWrapper from "./SvgWrapper";
 
 class EditPancakeForm extends Component {
   handleChange = event => {
-    console.log(event.currentTarget.value);
-    console.log(event.currentTarget.name);
-
     // Take a copy of the current pancake
     const updatedPancake = {
       ...this.props.pancake,
@@ -101,7 +98,7 @@ const StyledForm = styled.div`
   }
 
   .item {
-    border-bottom: 1px solid #31549e;
+    border-bottom: 1px solid ${props => props.theme.mainBlue};
     width: 100%;
     padding: 0.75rem 0;
 
