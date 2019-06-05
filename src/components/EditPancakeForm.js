@@ -42,6 +42,7 @@ class EditPancakeForm extends Component {
           name="name"
           onChange={this.handleChange}
           value={name}
+          placeholder="name"
         />
         <input
           className="item"
@@ -49,7 +50,7 @@ class EditPancakeForm extends Component {
           name="price"
           onChange={this.handleChange}
           value={price}
-          placeholder="8 (in dollars)"
+          placeholder="price (in dollars)"
         />
         <div className="item item-wrapper">
           <label htmlFor="status">Availability</label>
@@ -68,6 +69,7 @@ class EditPancakeForm extends Component {
           name="desc"
           onChange={this.handleChange}
           value={desc}
+          placeholder="description"
         />
         <button
           className="btn-remove item"
